@@ -65,8 +65,6 @@ const ocrImage = async (file) => {
   
 }
 
-
-
 // buton de accion 
 btn.addEventListener('click', async () => {   
 
