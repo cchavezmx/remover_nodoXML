@@ -11,11 +11,9 @@ app.use(express.json({ extended: true }))
 // setear una carpeta
 app.use(express.static(path.join(__dirname, '/public')))
 
-
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
-// app.use(() => console.log("Hola mundo"))
 app.get("/", function(req, res){
   res.render('index')
 })
@@ -41,13 +39,13 @@ const insertContador = async (agent, contador) => {
 
 }
 
-
 app.post("/insertCount", async({ body }, res) => {  
   try {
     const response = await insertContador(body.agent, body.contador)
     if (response) return res.status(200).json({ message: 'Done' })
-  } catch (error) {
     
+  } catch (error) {
+    return res.status(500).json({ message: 'Error' })
   }
 })
 

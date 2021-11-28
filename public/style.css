@@ -21,3 +21,19 @@
 .form-transform * {  
   margin: 10px;
 }
+
+#error{
+  color: red;
+  font-size: 1.2rem;
+
+}
+
+.logoNavbar{
+  width: 40px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+
+}
